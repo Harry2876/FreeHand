@@ -7,6 +7,7 @@ import android.graphics.Color
 import android.graphics.Paint
 import android.graphics.Path
 import android.util.AttributeSet
+import android.util.TypedValue
 import android.view.MotionEvent
 import android.view.View
 
@@ -51,7 +52,7 @@ class DrawingView(context : Context, attributes : AttributeSet) : View(context,a
         //dither - flag that applies an underline decoration to drawn text
         mCanvasPaint = Paint(Paint.DITHER_FLAG)
 
-        mBrushSize = 10.toFloat()
+//        mBrushSize = 10.toFloat()
     }
 
     //we need to display bitmap on different screen sizes on which canvas will be there
@@ -123,6 +124,15 @@ class DrawingView(context : Context, attributes : AttributeSet) : View(context,a
         return true
     }
 
+
+    //setting the brushSize functionality
+    fun setSizeForBrush(newSize : Float){
+        //considering screen dimension
+        mBrushSize = TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, newSize
+        ,resources.displayMetrics )
+
+        mDrawPaint!!.strokeWidth = mBrushSize
+    }
 
 
     internal inner class CustomPath(var color : Int, var brushThickness : Float) : Path() {

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Brush Size Preview -->
+
+    <!-- Brush Size Slider -->
+
+    <ImageView
+        android:id="@+id/brushSizePreview"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="156dp"
+        android:background="@drawable/brush_circle_preview"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.26"
+        app:layout_constraintStart_toEndOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/brushSizeSlider" />
+
+    <com.google.android.material.slider.Slider
+        android:id="@+id/brushSizeSlider"
+        android:layout_width="387dp"
+        android:layout_height="41dp"
+        android:layout_marginTop="162dp"
+        android:layout_marginBottom="22dp"
+        android:stepSize="1.0"
+        android:value="10.0"
+        android:valueFrom="1.0"
+        android:valueTo="50.0"
+        app:tickVisible="false"
+        app:thumbWidth="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/brushSizePreview"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="39dp"
+        android:layout_marginEnd="5dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="Preview"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/brushSizePreview"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/brushSizeSlider" />
+
+    <ImageButton
+        android:id="@+id/ib_small_brush"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="112dp"
+        android:layout_marginTop="152dp"
+        android:layout_marginEnd="10dp"
+        android:src="@drawable/small"
+        app:layout_constraintEnd_toStartOf="@+id/ib_medium_brush"
+        app:layout_constraintHorizontal_bias="0.111"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/brushSizeSlider" />
+
+    <ImageButton
+        android:id="@+id/ib_medium_brush"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="164dp"
+        android:layout_marginTop="144dp"
+        android:layout_marginEnd="10dp"
+        android:src="@drawable/medium"
+        app:layout_constraintEnd_toStartOf="@+id/ib_large_brush"
+        app:layout_constraintHorizontal_bias="0.416"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/brushSizeSlider" />
+
+    <ImageButton
+        android:id="@+id/ib_large_brush"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="136dp"
+        android:layout_marginEnd="116dp"
+        android:src="@drawable/large"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/brushSizeSlider" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
