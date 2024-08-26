@@ -32,6 +32,9 @@ class DrawingView(context : Context, attributes : AttributeSet) : View(context,a
     //for creating canvas to draw
     private var canvas : Canvas? = null
 
+    //for storing the drawing path creating a immutable array list
+    private val mpath = ArrayList<CustomPath>()
+
     init {
         setUpDrawing()
     }
@@ -65,6 +68,13 @@ class DrawingView(context : Context, attributes : AttributeSet) : View(context,a
     override fun onDraw(canvas: Canvas) {
         super.onDraw(canvas)
         canvas.drawBitmap(mCanvasBitmap!!,0f,0f,mCanvasPaint)
+
+        //creating for loop to store paths
+        for(path in mpath){
+            mDrawPaint!!.strokeWidth = path.brushThickness
+            mDrawPaint!!.color = path.color
+            canvas.drawPath(path, mDrawPaint!!)
+        }
 
         if (!mDrawPath!!.isEmpty){
             mDrawPaint!!.strokeWidth = mDrawPath!!.brushThickness
@@ -101,6 +111,7 @@ class DrawingView(context : Context, attributes : AttributeSet) : View(context,a
             }
 
             MotionEvent.ACTION_UP -> {
+                mpath.add(mDrawPath!!)
                 mDrawPath = CustomPath(color, mBrushSize)
             }
             else -> return false
