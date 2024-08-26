@@ -24,8 +24,8 @@
 
     <com.google.android.material.slider.Slider
         android:id="@+id/brushSizeSlider"
-        android:layout_width="387dp"
-        android:layout_height="41dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginTop="162dp"
         android:layout_marginBottom="22dp"
         android:stepSize="1.0"
