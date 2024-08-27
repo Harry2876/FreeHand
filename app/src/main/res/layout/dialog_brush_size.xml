@@ -32,12 +32,12 @@
         android:value="10.0"
         android:valueFrom="1.0"
         android:valueTo="50.0"
-        app:tickVisible="false"
-        app:thumbWidth="20dp"
         app:layout_constraintBottom_toTopOf="@+id/brushSizePreview"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:thumbWidth="20dp"
+        app:tickVisible="false" />
 
     <TextView
         android:id="@+id/textView2"
@@ -89,6 +89,96 @@
         android:src="@drawable/large"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/brushSizeSlider" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="52dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ib_medium_brush">
+
+        <ImageButton
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_margin="2dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/pallet_normal"
+            android:tag="@color/skin"
+            android:background="@color/skin"
+            tools:layout_editor_absoluteX="122dp"
+            tools:layout_editor_absoluteY="439dp" />
+
+        <ImageButton
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_margin="2dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/pallet_normal"
+            android:tag="@color/black"
+            android:background="@color/black"
+            tools:layout_editor_absoluteX="122dp"
+            tools:layout_editor_absoluteY="439dp" />
+
+        <ImageButton
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_margin="2dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/pallet_normal"
+            android:tag="@color/red"
+            android:background="@color/red"
+            tools:layout_editor_absoluteX="122dp"
+            tools:layout_editor_absoluteY="439dp" />
+
+        <ImageButton
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_margin="2dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/pallet_normal"
+            android:tag="@color/green"
+            android:background="@color/green"
+            tools:layout_editor_absoluteX="122dp"
+            tools:layout_editor_absoluteY="439dp" />
+
+        <ImageButton
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_margin="2dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/pallet_normal"
+            android:tag="@color/blue"
+            android:background="@color/blue"
+            tools:layout_editor_absoluteX="122dp"
+            tools:layout_editor_absoluteY="439dp" />
+
+        <ImageButton
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_margin="2dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/pallet_normal"
+            android:tag="@color/lollipop"
+            android:background="@color/lollipop"
+            tools:layout_editor_absoluteX="122dp"
+            tools:layout_editor_absoluteY="439dp" />
+
+        <ImageButton
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_margin="2dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/pallet_normal"
+            android:tag="@color/random"
+            android:background="@color/random"
+            tools:layout_editor_absoluteX="122dp"
+            tools:layout_editor_absoluteY="439dp" />
+
+
+    </LinearLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

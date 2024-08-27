@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
-    <color name="app_title">#FF000000</color>
-
+    <color name="app_title">#FFFFFFFF</color>
     <color name="skin">#ffcc99</color>
     <color name="red">#ff0000</color>
     <color name="green">#00ff00</color>
@@ -11,5 +8,4 @@
     <color name="yellow">#ffff00</color>
     <color name="lollipop">#35a79c</color>
     <color name="random">#A349B1</color>
-
 </resources>
